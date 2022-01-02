@@ -1,5 +1,4 @@
-<div>
-	<img class="thumb" [src]="product.image" alt="" />
-	<h2>{{ product.price }}€</h2>
-	<p>{{ product.name }}</p>
-</div>
+<app-img [img]="product.image"></app-img>
+<h2>{{ product.price }}€</h2>
+<p>{{ product.name }}</p>
+<button (click)="AddToCart()">Add cart</button>

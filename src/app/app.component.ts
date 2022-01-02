@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Product } from './models/product.model';
 
 @Component({
 	selector: 'app-root',
@@ -7,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 	imgParent = '';
+	showImg = true;
 
 	onLoaded(img: string) {
 		console.log('log padre: ', img);

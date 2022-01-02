@@ -2,3 +2,8 @@ img.thumb {
 	max-width: 80px;
 	height: auto;
 }
+
+p,
+h2 {
+	margin: 0;
+}

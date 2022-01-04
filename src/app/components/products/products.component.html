@@ -1,14 +1,7 @@
-<div class="container">
-	<p>La cantidad: {{ myShoppingCart.length }}</p>
-	<br />
-	<p>Total: {{ total }} €</p>
-	<!-- 	<p>Today: {{ today | timeAgo }}</p> -->
-	<br />
-	<div class="products--grid">
-		<app-product
-			*ngFor="let product of products"
-			[product]="product"
-			(addedProduct)="onAddToShoppingCart($event)"
-		></app-product>
-	</div>
+<div class="products--grid">
+  <app-product
+    [product]="product"
+    *ngFor="let product of products"
+    (addedProduct)="onAddToShoppingCart($event)"
+  ></app-product>
 </div>

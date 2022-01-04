@@ -6,33 +6,41 @@ import { StoreService } from '../../services/store.service';
 import { ProductsService } from '../../services/products.service';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+	selector: 'app-products',
+	templateUrl: './products.component.html',
+	styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent implements OnInit {
+	myShoppingCart: Product[] = [];
+	total = 0;
+	products: Product[] = [];
+	showProductDetail = false;
 
-  myShoppingCart: Product[] = [];
-  total = 0;
-  products: Product[] = [];
+	constructor(
+		private storeService: StoreService,
+		private productsService: ProductsService
+	) {
+		this.myShoppingCart = this.storeService.getShoppingCart();
+	}
 
-  constructor(
-    private storeService: StoreService,
-    private productsService: ProductsService
-  ) {
-    this.myShoppingCart = this.storeService.getShoppingCart();
-  }
+	ngOnInit(): void {
+		this.productsService.getAllProducts().subscribe((data) => {
+			this.products = data;
+		});
+	}
 
-  ngOnInit(): void {
-    this.productsService.getAllProducts()
-    .subscribe(data => {
-      this.products = data;
-    });
-  }
+	onAddToShoppingCart(product: Product) {
+		this.storeService.addProduct(product);
+		this.total = this.storeService.getTotal();
+	}
 
-  onAddToShoppingCart(product: Product) {
-    this.storeService.addProduct(product);
-    this.total = this.storeService.getTotal();
-  }
+	toggleProductDetail() {
+		this.showProductDetail = !this.showProductDetail;
+	}
 
+	onShowDetail(id: string) {
+		this.productsService.getProduct(id).subscribe((data) => {
+			console.log(data);
+		});
+	}
 }

@@ -1,4 +1,7 @@
-<app-img [img]="product.image"></app-img>
-<h2>{{ product.price | currency: "€ " }}</h2>
-<p>{{ product.title }}</p>
-<button (click)="onAddToCart()">Add cart</button>
+<div class="one-product">
+	<app-img *ngIf="product.images.length" [img]="product.images[0]"></app-img>
+	<h2 appHighlight>{{ product.price | currency: "€ " }}</h2>
+	<p>{{ product.title }}</p>
+	<button (click)="onShowDetails()" class="details">Details [+]</button>
+	<button (click)="onAddToCart()">Add cart</button>
+</div>

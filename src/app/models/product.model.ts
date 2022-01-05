@@ -11,3 +11,11 @@ export interface Product {
 	description: string;
 	category: Category;
 }
+
+export interface ProductDTO extends Omit<Product, 'id' | 'category'> {
+	categoryId: number;
+}
+
+// all attributes are optional
+// Partial
+export interface UpdateProductDTO extends Partial<ProductDTO> {}

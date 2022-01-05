@@ -1,9 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 @import url(./styles/reset.scss);
+@import "~swiper/css";
 
 * {
 	font-family: "Quicksand", sans-serif;
+}
+
+.container {
+	padding: 1em;
 }
 
 .products--grid {
@@ -13,4 +18,38 @@
 			max-height: 200px;
 		}
 	}
+}
+
+.buttonGreen {
+	background-color: #acd9b2;
+	color: #0c5a17;
+	border: 0;
+	border-radius: 3px;
+	height: 24px;
+	cursor: pointer;
+	margin-top: 6px;
+	margin-left: 5px;
+	transition: all ease 0.3s;
+}
+
+.buttonGreen:hover {
+	background-color: #0c5a17;
+	color: #acd9b2;
+}
+
+.buttonRed {
+	background-color: #fac8d4;
+	color: #550215;
+	border: 0;
+	border-radius: 3px;
+	height: 24px;
+	cursor: pointer;
+	margin-top: 6px;
+	margin-left: 5px;
+	transition: all ease 0.3s;
+}
+
+.buttonRed:hover {
+	background-color: #550215;
+	color: #fac8d4;
 }

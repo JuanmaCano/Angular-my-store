@@ -4,40 +4,6 @@ h2 {
 	margin-top: 6px;
 }
 
-button {
-	background-color: #acd9b2;
-	color: #0c5a17;
-	border: 0;
-	border-radius: 3px;
-	height: 24px;
-	cursor: pointer;
-	margin-top: 6px;
-	margin-left: 5px;
-	transition: all ease 0.3s;
-}
-
-button:hover {
-	background-color: #0c5a17;
-	color: #acd9b2;
-}
-
-button.details {
-	background-color: #fac8d4;
-	color: #550215;
-	border: 0;
-	border-radius: 3px;
-	height: 24px;
-	cursor: pointer;
-	margin-top: 6px;
-	margin-left: 5px;
-	transition: all ease 0.3s;
-}
-
-button.details:hover {
-	background-color: #550215;
-	color: #fac8d4;
-}
-
 .one-product {
 	text-align: center;
 	margin-bottom: 10px;

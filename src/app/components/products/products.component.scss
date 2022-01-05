@@ -1,10 +1,11 @@
 .products--grid {
 	display: flex;
 	flex-direction: column;
-	padding: 1em;
+	margin: 1em 0;
 }
 
 .product-detail {
+	padding: 0px 30px;
 	position: fixed;
 	top: 0;
 	left: 50%;
@@ -16,9 +17,28 @@
 	justify-content: flex-start;
 	transition: all ease-out 0.5s;
 	transform: translateX(100%);
+	border-left: 2px solid #dd0031;
 	&.active {
 		transform: translateX(0);
 	}
+}
+
+.product-detail .buttonClose {
+	display: flex;
+	justify-content: end;
+	margin: 20px 0px;
+}
+
+.product-detail .buttonClose button {
+	cursor: pointer;
+}
+
+.product-detail .slide {
+	padding: 20px 0px;
+}
+
+.product-detail img {
+	border-radius: 5px;
 }
 
 // tablets

@@ -8,7 +8,7 @@
 	padding: 0px 30px;
 	position: fixed;
 	top: 0;
-	left: 50%;
+	left: 0%;
 	bottom: 0;
 	right: 0;
 	background-color: white;
@@ -56,5 +56,24 @@
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
 		grid-gap: 15px;
+	}
+
+	.product-detail {
+		padding: 0px 30px;
+		position: fixed;
+		top: 0;
+		left: 50%;
+		bottom: 0;
+		right: 0;
+		background-color: white;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		transition: all ease-out 0.5s;
+		transform: translateX(100%);
+		border-left: 2px solid #dd0031;
+		&.active {
+			transform: translateX(0);
+		}
 	}
 }
